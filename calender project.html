@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender project is the makeing  with the using javascript</title>
+    <link rel="stylesheet" href="calender project 2.css">
+</head>
+<body>
+   
+
+    <div id="container">
+        <div id="mainPage">
+            <div id="left">
+                <p id="date">
+                    21 
+                </p>
+                <p id="day">
+                    Thursday 
+                </p>
+            </div>
+            <div id="right">
+                <p id="month">
+                    June 
+                </p>
+                <p id="year">
+                    2024
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+      
+<script>
+
+const date = document.getElementById("date");
+const day = document.getElementById("day");
+const month = document.getElementById("month");
+const year = document.getElementById("year"); 
+
+const today= new Date();
+ 
+
+const WeeksDay = ["Sunday","Monday","Tuesday","Thursday","Friday","Saturday"];
+const allMonths = ["January","Feburary","March","April","May","May","June","July","August","Septmber","Novmber","December"];
+
+date.innerHTML= today.getDate();
+day.innerHTML= WeeksDay[today.getDay()];
+month.innerHTML= allMonths[today.getMonth()];
+year.innerHTML= today.getFullYear();
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
