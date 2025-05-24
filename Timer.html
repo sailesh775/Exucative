@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time project is making in the site</title>
+    <!-- <link rel="stylesheet" href="Time counting-2.css"> -->
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(150, 150, 180); */
+}
+
+.container{
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: mediumorchid;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    position: relative;
+    top: 70px;
+    left: 60px;
+}
+.container::before{
+    content: ' ';
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 260px;
+    top: 60px;
+    border-radius:10px ;
+    background-color: pink;
+    z-index: -1;
+}
+
+.container::after{
+    content: ' ';
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 260px;
+    bottom: 70px;
+    border-radius:40px ;
+    background-color: orange;
+    z-index: -1;
+}
+.clock{
+    width: 250px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: sans-serif;
+    align-items: center;
+    background-color: mediumorchid;
+    backdrop-filter: blur(100px);
+}
+.clock #HOUR::after{
+    content: "HOUR";
+    position: absolute;
+    bottom: -15px;
+    left: -0px;
+    font-size: 10px;
+    
+}
+
+.clock #MINIUTE::after{
+    content: "MIN";
+    position: absolute;
+    bottom: -15px;
+    right:115px;
+    font-size: 10px;
+    
+}
+
+.clock #SECOEND::after{
+    content: "SEC";
+    position: absolute;
+    bottom: -15px;
+    right: 3px;
+    font-size: 10px;
+    
+}
+
+
+
+</style>
+<body>
+
+     
+
+    <div class="container">
+        <div class="clock">
+            <span id="HOUR">00</span>
+            <span id="astic">:</span>
+            <span id="MINIUTE">00</span>
+            <span id="astic">:</span>
+            <span id="SECOEND">00</span>
+        </div>
+    </div>
+
+
+    <script>
+
+    const hrs = document.getElementById("HOUR");
+    const min = document.getElementById("MINIUTE");
+    const sec = document.getElementById("SECOEND");
+
+
+    setInterval (()=>{
+        let currentTime = new Date();
+        hrs.innerHTML= currentTime.getHours();
+        min.innerHTML= currentTime.getMinutes();
+        sec.innerHTML= currentTime.getSeconds();
+
+    },1000)
+
+
+        
+    </script>
+
+
+
+
+
+</body>
+
+</html>
