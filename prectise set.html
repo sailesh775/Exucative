@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prectise set</title>
+</head>
+<body>
+    <script>
+        let product =  {
+            name: 'jeans',
+            size: 32,
+            fitSize: 'slim',  
+            'delivery-time' : 'same day delivey'
+        };
+        let product1 =  {
+            name: 'jeans',
+            size: 32,
+            fitSize: 'slim',  
+            'delivery-time' : 'same day delivey'
+        };
+
+        let product2 =  {
+            name: 'jeans',
+            size: 32,
+            fitSize: 'slim',  
+            'delivery-time' : 'same day delivey'
+        };
+
+
+
+        let product3 =  {
+            name: 'jeans',
+            size: 45,
+            fitSize: 'slim',  
+            'delivery-time' : 'same day delivey'
+        };
+        //referance page formate.............
+
+        // let copyProduct = product;
+        // console.log(product);
+        // copyProduct.name = 'formal paint';
+        // console.log(product);
+        // copyProduct.size = 55;
+        // console.log(product);
+        console.log(product['delivery-time']);
+
+        ///DE STRUCHING ......................
+
+        // let obj = {
+        //   message: 'good job',
+        //   status: 'completed'
+        // };
+        
+        // console.log(obj);
+
+        // let {message , status} = obj;
+        // console.log(message);
+        // console.log(status);
+
+        function isIdenticalProduct (product1 , product2) {
+            if (typeof product1 !== 'object' || typeof product2 !== 'object') {
+                console.warn('Peramiter is not pass an object');
+                    return false;
+            }
+          
+         
+            if (product1 == product2) {
+                    return true;   
+            }
+  
+            if (product1.name === product2.name &&
+                product2.size === product2.size &&
+                product3.fitSize === product2.fitSize &&
+                product.name === product2.name) {
+                    return true;
+                }   else {
+                    return false;
+                }
+        } 
+
+
+        console.log(isIdenticalProduct(product1, product3));
+        console.log(isIdenticalProduct(product, product2));
+        console.log(isIdenticalProduct(product2, product1));
+        console.log(isIdenticalProduct(product2, product3));
+        console.log(isIdenticalProduct(product3, product1));
+       
+
+
+    </script>
+</body>
+</html>
