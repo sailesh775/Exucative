@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bAT BALL PROJECT</title>
+</head>
+<script>
+
+let score ={
+ win: 0,
+ tire: 0,
+ lose: 0,
+};
+
+  function Mussu() {
+  console.log('You have chossen Ball');
+  let randomNumber = Math.random()*3;
+  let computerChoice;
+  if (randomNumber > 0 && randomNumber <= 1) {
+  computerChoice = 'Ball';
+  } else if (randomNumber > 1 && randomNumber <= 2) {
+    computerChoice = 'Bat';
+  } else {
+     computerChoice = 'Stump';
+  }
+  console.log(`computer choice is ${computerChoice}`);
+
+
+  let resultMsg;
+  if (computerChoice ==='Ball'){
+    score.tire++;
+    resultMsg = (`it's tire`);
+  } else if (computerChoice ==='Bat'){
+    score.lose++;
+    resultMsg = ('Computer has been won');
+  } else {
+    score.win++;
+     resultMsg = ('user won');
+  }
+   
+
+  
+   console.log(` ${resultMsg}`);
+   console.log(score);
+  alert(`you did chosen Ball. computer choice ${computerChoice} and ${resultMsg}`);
+}
+</script>
+<body>
+
+  <h1>Bat Ball Stamp Game</h1>
+
+  <button onclick="Mussu()">Bat</button>
+  <button onclick="Mussu()">Ball</button>
+  <button onclick="Mussu()">Stump</button>
+   
+</body>
+</html>
+
+
+
