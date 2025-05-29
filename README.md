@@ -1,2 +1,1 @@
-# Exucative
-Modify application
+Projects and all details
